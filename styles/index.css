@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
+
+.container {
+    height: 100vh;
+    text-align: center;
+}
+
+.background {
+    font-family: 'Lacquer';
+    border: 1px solid black;
+}
+
+.background h1 {
+    font-size: 17vw;
+}
+.projects {
+    border: 1px solid red;
+}
