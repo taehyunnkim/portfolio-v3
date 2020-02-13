@@ -1,18 +1,129 @@
-@import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lacquer|Quicksand|Raleway|Abel|Josefin+Slab|Poiret+One&display=swap');
+body {
+    background-color: #F1F1F1 !important;
+    overflow-x: hidden;
+}
+
+.homeContainer {
+    height: 100vh;
+}
+
+.projectContainer {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.logo {
+    background-image: url(/assets/logo.png);
+    height: 30vw;
+    width: 30vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 .container {
     height: 100vh;
     text-align: center;
 }
 
-.background {
-    font-family: 'Lacquer';
-    border: 1px solid black;
+.backgroundTitle {
+    font-family: 'Poiret One';
+    color: rgb(61, 61, 61);
 }
 
 .background h1 {
-    font-size: 17vw;
+    font-size: 10vw;
 }
+
 .projects {
-    border: 1px solid red;
+    /* border: 1px solid red; */
+}
+
+.box {
+    /* border: 1px solid green; */
+    width: 60%;
+    height: 300px;
+}
+
+.projectContainer {
+    text-align: center;
+}
+
+.painting {
+    width: 100%;
+    height: 300px;
+}
+
+.painting-1 {
+    background-image: url('/assets/placeholders/1.jpg');
+    box-shadow: 0px 4px 3px 2px rgba(0, 0, 0, 0.7);
+    background-size: cover;
+}
+
+.painting-2 {
+    background-image: url('../assets/placeholders/2.jpg');
+    box-shadow: 0px 4px 3px 2px rgba(0, 0, 0, 0.7);
+    background-size: cover;
+}
+
+.painting-3 {
+    background-image: url('../assets/placeholders/3.jpg');
+    box-shadow: 0px 4px 3px 2px rgba(0, 0, 0, 0.7);
+    background-size: cover;
+}
+
+.painting-4 {
+    background-image: url('../assets/placeholders/4.jpg');
+    box-shadow: 0px 4px 3px 2px rgba(0, 0, 0, 0.7);
+    background-size: cover;
+}
+
+.painting-5 {
+    background-image: url('../assets/placeholders/5.jpg');
+    box-shadow: 0px 4px 3px 2px rgba(0, 0, 0, 0.7);
+    background-size: cover;
+}
+
+@media screen and (max-width: 992px) {
+    .painting {
+        display: inline-block;
+        width: 100%;
+        height: 200px;
+        margin-top: 10px;
+    }
+}
+
+.line {
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: black;
+    opacity: 0.1;
+    top: 0;
+    z-index: -2;
+}
+
+.line-1 {
+    left: calc(20% - 0.5px);
+}
+
+.line-2 {
+    left: calc(40% - 0.5px);
+}
+
+.line-3 {
+    left: calc(60% - 0.5px);
+}
+
+.line-4 {
+    left: calc(80% - 0.5px);
 }
