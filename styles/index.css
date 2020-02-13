@@ -54,6 +54,15 @@ body {
     height: 300px;
 }
 
+#trigger {
+    position: absolute;
+    width: 100vw;
+    height: 50vh;
+    bottom: 0;
+    bottom: 0;
+    border: 1px solid black;
+}
+
 .projectContainer {
     text-align: center;
 }
@@ -61,6 +70,7 @@ body {
 .painting {
     width: 100%;
     height: 300px;
+    cursor: pointer;
 }
 
 .painting-1 {
