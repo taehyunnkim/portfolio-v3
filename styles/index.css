@@ -48,15 +48,6 @@ body {
     height: 300px;
 }
 
-#trigger {
-    position: absolute;
-    width: 100vw;
-    height: 50vh;
-    bottom: 0;
-    bottom: 0;
-    border: 1px solid black;
-}
-
 .line {
     position: absolute;
     height: 100%;

@@ -20,20 +20,25 @@ $(".painting").hover(
     }
 );
 
+let ele = $(".painting");
+
+let action = gsap.timeline()
+    .from(ele, {
+        duration: 2,
+        opacity: 0,
+        y: '70%',
+        ease: "power3.out"
+    })
 
 // scroll 
 // init controller
 var controller = new ScrollMagic.Controller();
 
-let ele = $(".painting");
-let action = gsap.timeline()
-    .from(ele, { duration: 1.5, y: '70%', ease: "power3.out" })
-    .set(ele, { y: '0%' })
-
-
-scene = new ScrollMagic.Scene({
-        triggerElement: '#trigger',
+const scene = new ScrollMagic.Scene({
+        triggerElement: '.projects',
         duration: 0,
+        triggerHook: 0.5
     })
     .setTween(action)
-    .addTo(controller)
+    // .addIndicators()
+    .addTo(controller);
