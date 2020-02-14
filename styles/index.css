@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lacquer|Quicksand|Raleway|Abel|Josefin+Slab|Poiret+One&display=swap');
 body {
-    background-color: #F1F1F1 !important;
+    /* background-color: #F1F1F1 !important; */
     overflow-x: hidden;
 }
 
@@ -17,11 +17,17 @@ body {
 
 .logo {
     background-image: url(/assets/logo.png);
-    height: 30vw;
-    width: 30vw;
+    height: 8vw;
+    width: 8vw;
+    margin-top: -50vh;
+    margin-left: 2vw;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.panel {
+    height: 100vh;
 }
 
 .container {
