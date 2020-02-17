@@ -1,1 +1,28 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.bgContainer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.col-left {
+  border-right: 1px solid lightgray;
+  width: 20%;
+}
+
+.col-right {
+  border-left: 1px solid lightgray;
+  width: 20%;
+}
+
+.col-center {
+  width: 60%;
+}
+/*# sourceMappingURL=index.css.map */
