@@ -1,4 +1,6 @@
+html,
 body {
+    font-size: 100%;
     margin: 0;
     padding: 0;
 }
@@ -8,6 +10,16 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
+}
+
+.logo {
+    background-image: url("../assets/logo.png");
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 4rem auto;
 }
 
 .col-left {
