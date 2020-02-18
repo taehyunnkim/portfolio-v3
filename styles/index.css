@@ -1,12 +1,27 @@
+@import url("https://use.typekit.net/ymp0zrq.css");
 html,
 body {
   font-size: 100%;
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 200;
+  font-style: normal;
   margin: 0;
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: black;
+}
+
+.active {
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .bgContainer {
-  position: absolute;
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -30,11 +45,34 @@ body {
 }
 
 .col-right {
+  position: relative;
   border-left: 1px solid lightgray;
   width: 20%;
 }
 
 .col-center {
   width: 60%;
+}
+
+.navigation {
+  position: absolute;
+  right: 0;
+  width: 100vh;
+  height: 80px;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotate(90deg) translateY(-100vh);
+          transform: rotate(90deg) translateY(-100vh);
+}
+
+.nav-tabs {
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.nav-tabs > li {
+  padding: 0.6rem 1rem;
 }
 /*# sourceMappingURL=index.css.map */
