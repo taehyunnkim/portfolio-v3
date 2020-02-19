@@ -100,13 +100,13 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 550px;
+  width: 600px;
   height: 50%;
 }
 
 .intro > div {
   width: 50%;
-  margin: 0 5%;
+  margin: 0 3%;
 }
 
 .introRight {
@@ -121,7 +121,7 @@ a {
 }
 
 .introLeft {
-  height: 90%;
+  height: 75%;
 }
 
 .name {
