@@ -39,6 +39,7 @@ a {
 }
 
 .logo {
+  position: relative;
   background-image: url("../assets/logo.png");
   width: 100px;
   height: 100px;
@@ -46,20 +47,25 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
   margin: 4rem auto;
+  z-index: 5000;
 }
 
 .col-left {
+  position: relative;
   border-right: 1px solid lightgray;
   width: 20%;
+  background-color: #F1F1F1;
 }
 
 .col-right {
   position: relative;
   border-left: 1px solid lightgray;
   width: 20%;
+  background-color: #F1F1F1;
 }
 
 .col-center {
+  position: relative;
   width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -70,6 +76,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #F1F1F1;
 }
 
 .navigation {
@@ -128,7 +135,6 @@ a {
   left: 0;
   -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-  color: #6993f6;
 }
 
 .item a {
@@ -178,11 +184,22 @@ a {
 
 .tags {
   font-size: 0.8rem;
-  color: #6993f6;
 }
 
 .content {
   margin-top: 1rem;
   font-size: 0.8rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 100%;
+  background-color: white;
+  z-index: 100;
+  -webkit-transition: width 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: width 1.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 /*# sourceMappingURL=index.css.map */
