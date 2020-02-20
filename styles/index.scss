@@ -30,6 +30,7 @@ a {
     font-weight: 400;
     font-style: normal;
     cursor: default;
+    text-align: right;
 }
 
 .bgContainer {
@@ -86,18 +87,16 @@ a {
     margin: 10px;
     position: relative;
     overflow: hidden;
-    width: 70px;
+    padding: 0 3px;
 }
 
 .base {
-    width: 100%;
     text-align: center;
     display: block;
     transition: all .5s cubic-bezier(.23, 1, .32, 1);
 }
 
 .default {
-    width: 100%;
     position: absolute;
     text-align: center;
     top: 0;
@@ -111,13 +110,13 @@ a {
 }
 
 .hover {
-    width: 100%;
     font-weight: 400;
     position: absolute;
     text-align: center;
     top: -100%;
     left: 0;
     transition: all .5s cubic-bezier(.23, 1, .32, 1);
+    color: #6993f6;
 }
 
 .item a {
@@ -160,6 +159,7 @@ a {
 
 .tags {
     font-size: 0.8rem;
+    color: #6993f6;
 }
 
 .content {
