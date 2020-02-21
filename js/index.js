@@ -21,19 +21,44 @@
 
 // initCursor();
 
-const displayProjects = () => {
-    const overlay = document.getElementsByClassName("overlay");
-    Array.from(overlay).forEach((element, index) => {
+// get project contents
+const xhr = new XMLHttpRequest;
+let project = undefined;
+
+xhr.onload = function() {
+    project = this.response.body;
+}
+
+xhr.open('GET', "projects.html", true);
+xhr.responseType = "document";
+xhr.send();
+
+
+// homepage entrance
+const initHome = () => {
+
+}
+
+const overlay = document.getElementsByClassName("overlay");
+
+function displayProjects() {
+    Array.from(overlay).map((element, index) => {
         setTimeout(() => {
             element.style.width = "100%";
         }, 200 * index)
     });
 }
 
+overlay[2].addEventListener('transitionend', () => {
+    document.body = project;
+});
+
+// parallax
+
 const bg = document.getElementById("container");
 bg.addEventListener('mousemove', e => {
-    parallaxIt(e, ".introLeft", 10);
-    parallaxIt(e, ".introRight", -5);
+    parallaxIt(e, ".introLeft", 20);
+    parallaxIt(e, ".introRight", -10);
 });
 
 function parallaxIt(e, target, movement) {

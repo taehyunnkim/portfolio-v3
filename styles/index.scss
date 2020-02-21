@@ -81,6 +81,7 @@ a {
     height: 80px;
     transform-origin: 0 0;
     transform: rotate(90deg) translateY(-100vh);
+    z-index: 100;
 }
 
 .nav-tabs {
@@ -206,3 +207,12 @@ a {
 //     z-index: 11000;
 //     background-color: red;
 // }
+// Projects Page
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 50%;
+    background: 1px solid black;
+}

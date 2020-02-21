@@ -88,6 +88,7 @@ a {
           transform-origin: 0 0;
   -webkit-transform: rotate(90deg) translateY(-100vh);
           transform: rotate(90deg) translateY(-100vh);
+  z-index: 100;
 }
 
 .nav-tabs {
