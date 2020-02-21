@@ -30,7 +30,7 @@ a {
   text-align: right;
 }
 
-.bgContainer {
+#container {
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -180,15 +180,27 @@ a {
   font-weight: 200;
   font-size: 1.6rem;
   margin-left: -0.1rem;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .tags {
   font-size: 0.8rem;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .content {
   margin-top: 1rem;
   font-size: 0.8rem;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .overlay {

@@ -29,3 +29,19 @@ const displayProjects = () => {
         }, 200 * index)
     });
 }
+
+const bg = document.getElementById("container");
+bg.addEventListener('mousemove', e => {
+    parallaxIt(e, ".introLeft", 10);
+    parallaxIt(e, ".introRight", -5);
+});
+
+function parallaxIt(e, target, movement) {
+    const width = bg.getBoundingClientRect().width;
+    const height = bg.getBoundingClientRect().height
+
+    gsap.to(target, 1, {
+        x: (e.pageX - width / 2) / width * movement,
+        y: (e.pageY - height / 2) / height * movement
+    });
+}

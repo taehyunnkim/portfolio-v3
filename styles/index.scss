@@ -33,7 +33,7 @@ a {
     text-align: right;
 }
 
-.bgContainer {
+#container {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -162,16 +162,22 @@ a {
     font-weight: 200;
     font-size: 1.6rem;
     margin-left: -0.1rem;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
 }
 
 .tags {
     font-size: 0.8rem;
     // color: #6993f6;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
 }
 
 .content {
     margin-top: 1rem;
     font-size: 0.8rem;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
 }
 
 .overlay {
