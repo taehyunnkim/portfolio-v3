@@ -67,7 +67,7 @@ function displayProjects() {
         }, 200 * index)
     });
 
-    overlay[2].addEventListener('transitionend', () => {
+    overlay[0].addEventListener('transitionend', () => {
         document.body = page;
         gsap.to(document.querySelector(".projects"), 0.5, {
             opacity: 1,
@@ -97,7 +97,7 @@ function displayHome() {
         }, 200 * index)
     });
 
-    overlay[2].addEventListener('transitionend', () => {
+    overlay[0].addEventListener('transitionend', () => {
         document.body = page;
         initHome();
     });
