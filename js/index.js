@@ -25,13 +25,16 @@
 const initHome = () => {
     console.log("loaded");
     const bg = document.getElementById("container");
+
     bg.addEventListener('mousemove', e => {
         parallaxIt(e, ".introLeft", 15, bg);
         parallaxIt(e, ".introRight", -8, bg);
     });
 
     let intro = document.querySelector(".intro");
-    gsap.from(intro, 1.5, {
+    intro.style.opacity = "1";
+
+    gsap.from(intro, 1, {
         opacity: 0,
         y: 50,
         ease: "power4.out"
