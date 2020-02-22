@@ -21,49 +21,67 @@
 
 // initCursor();
 
-// get project contents
-const xhr = new XMLHttpRequest;
-let project = undefined;
-
-xhr.onload = function() {
-    project = this.response.body;
-}
-
-xhr.open('GET', "projects.html", true);
-xhr.responseType = "document";
-xhr.send();
-
-
 // homepage entrance
 const initHome = () => {
-
+    console.log("loaded");
+    const bg = document.getElementById("container");
+    bg.addEventListener('mousemove', e => {
+        parallaxIt(e, ".introLeft", 20, bg);
+        parallaxIt(e, ".introRight", -10, bg);
+    });
 }
 
 const overlay = document.getElementsByClassName("overlay");
+const xhr = new XMLHttpRequest;
+let page = undefined;
 
 function displayProjects() {
+    xhr.open('GET', "projects.html", true);
+    xhr.responseType = "document";
+    xhr.send();
+
+    xhr.onload = function() {
+        page = this.response.body;
+    }
+
     Array.from(overlay).map((element, index) => {
         setTimeout(() => {
             element.style.width = "100%";
         }, 200 * index)
     });
+
+    overlay[2].addEventListener('transitionend', () => {
+        document.body = page;
+    });
+
 }
 
-overlay[2].addEventListener('transitionend', () => {
-    document.body = project;
-});
+function displayHome() {
+    xhr.open('GET', "index.html", true);
+    xhr.responseType = "document";
+    xhr.send();
+
+    xhr.onload = function() {
+        page = this.response.body;
+    }
+
+
+    Array.from(overlay).map((element, index) => {
+        setTimeout(() => {
+            element.style.width = "0%";
+        }, 200 * index)
+    });
+
+    overlay[2].addEventListener('transitionend', () => {
+        document.body = page;
+        initHome();
+    });
+}
 
 // parallax
-
-const bg = document.getElementById("container");
-bg.addEventListener('mousemove', e => {
-    parallaxIt(e, ".introLeft", 20);
-    parallaxIt(e, ".introRight", -10);
-});
-
-function parallaxIt(e, target, movement) {
-    const width = bg.getBoundingClientRect().width;
-    const height = bg.getBoundingClientRect().height
+function parallaxIt(e, target, movement, screen) {
+    const width = screen.getBoundingClientRect().width;
+    const height = screen.getBoundingClientRect().height
 
     gsap.to(target, 1, {
         x: (e.pageX - width / 2) / width * movement,
