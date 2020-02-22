@@ -62,6 +62,10 @@ function displayProjects() {
 
     overlay[2].addEventListener('transitionend', () => {
         document.body = page;
+        gsap.to(document.querySelector(".projects"), 0.5, {
+            opacity: 1,
+            ease: "power4.in"
+        })
     });
 
 }
@@ -75,6 +79,10 @@ function displayHome() {
         page = this.response.body;
     }
 
+    gsap.to(document.querySelector(".projects"), 0.5, {
+        opacity: 0,
+        ease: "power4.out"
+    })
 
     Array.from(overlay).map((element, index) => {
         setTimeout(() => {
