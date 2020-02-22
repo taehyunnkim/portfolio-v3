@@ -230,4 +230,66 @@ a {
   height: 50%;
   background: 1px solid black;
 }
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 10000;
+    -webkit-animation: colorchange 50s;
+            animation: colorchange 50s;
+  }
+}
+
+@-webkit-keyframes colorchange {
+  0% {
+    background: #FF9AA2;
+  }
+  25% {
+    background: #FFDAC1;
+  }
+  50% {
+    background: #E2F0CB;
+  }
+  75% {
+    background: #B5EAD7;
+  }
+  100% {
+    background: #C7CEEA;
+  }
+}
+
+@keyframes colorchange {
+  0% {
+    background: #FF9AA2;
+  }
+  25% {
+    background: #FFDAC1;
+  }
+  50% {
+    background: #E2F0CB;
+  }
+  75% {
+    background: #B5EAD7;
+  }
+  100% {
+    background: #C7CEEA;
+  }
+}
 /*# sourceMappingURL=index.css.map */

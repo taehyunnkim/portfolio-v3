@@ -216,3 +216,41 @@ a {
     height: 50%;
     background: 1px solid black;
 }
+
+// Mobile 
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .mobile {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        animation: colorchange 50s;
+    }
+}
+
+@keyframes colorchange {
+    0% {
+        background: #FF9AA2;
+    }
+    25% {
+        background: #FFDAC1;
+    }
+    50% {
+        background: #E2F0CB;
+    }
+    75% {
+        background: #B5EAD7;
+    }
+    100% {
+        background: #C7CEEA;
+    }
+}
