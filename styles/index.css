@@ -165,7 +165,7 @@ a {
 }
 
 .introRight {
-  height: 80%;
+  height: 82%;
   background-image: url("../assets/headshot-min.png");
   background-size: cover;
   background-position: center;
@@ -176,7 +176,7 @@ a {
 }
 
 .introLeft {
-  height: 75%;
+  height: 85%;
 }
 
 .name {
@@ -199,7 +199,7 @@ a {
 
 .content {
   margin-top: 1rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
@@ -241,6 +241,19 @@ a {
 
 .mobile {
   display: none;
+}
+
+@media only screen and (max-height: 900px) {
+  .introRight {
+    height: 100%;
+    background-image: url("../assets/headshot-min.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+  }
 }
 
 @media only screen and (max-width: 1000px) {
