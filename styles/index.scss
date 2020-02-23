@@ -123,8 +123,19 @@ footer {
     left: 50%;
     position: absolute;
     background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    transition: all .5s cubic-bezier(.23, 1, .32, 1);
     width: 0;
+}
+
+.underline {
+    color: gray;
+    font-weight: 200;
+    font-size: 1.3rem;
+    transition: all .5s cubic-bezier(.23, 1, .32, 1);
+}
+
+.underline:hover {
+    color: black;
 }
 
 .underline:hover:after {

@@ -142,9 +142,21 @@ footer {
   position: absolute;
   background: -webkit-gradient(linear, left top, right top, from(#12c2e9), color-stop(#c471ed), to(#f64f59));
   background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
-  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   width: 0;
+}
+
+.underline {
+  color: gray;
+  font-weight: 200;
+  font-size: 1.3rem;
+  -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.underline:hover {
+  color: black;
 }
 
 .underline:hover:after {
