@@ -74,10 +74,10 @@ function displayProjects() {
             ease: "power4.in"
         })
     });
-
 }
 
-function displayHome() {
+function displayHome(btn) {
+    btn.removeAttribute("onclick");
     xhr.open('GET', "index.html", true);
     xhr.responseType = "document";
     xhr.send();
@@ -101,6 +101,7 @@ function displayHome() {
         document.body = page;
         initHome();
     });
+
 }
 
 // parallax
