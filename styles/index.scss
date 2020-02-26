@@ -106,6 +106,32 @@ footer {
     padding-left: 1.5rem;
 }
 
+.underline {
+    color: gray;
+    font-weight: 200;
+    font-size: 1.3rem;
+    transition: all .5s cubic-bezier(.23, 1, .32, 1);
+    &:hover {
+        color: black;
+    }
+    &:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+        transition: all .5s cubic-bezier(.23, 1, .32, 1);
+        width: 0;
+    }
+    &:hover:after {
+        width: 100%;
+        left: 0;
+    }
+}
+
 .item {
     list-style: none;
     margin: 10px;
@@ -113,35 +139,18 @@ footer {
     overflow: hidden;
     padding: 0 3px;
     user-select: none;
-}
-
-.underline:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
-    transition: all .5s cubic-bezier(.23, 1, .32, 1);
-    width: 0;
-}
-
-.underline {
-    color: gray;
-    font-weight: 200;
-    font-size: 1.3rem;
-    transition: all .5s cubic-bezier(.23, 1, .32, 1);
-}
-
-.underline:hover {
-    color: black;
-}
-
-.underline:hover:after {
-    width: 100%;
-    left: 0;
+    &:hover {
+        .hover {
+            transform: translate(0, 100%);
+        }
+        .base {
+            transform: translate(0, 100%);
+        }
+    }
+    &>a {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .base {
@@ -158,11 +167,6 @@ footer {
     visibility: hidden;
 }
 
-.item:hover .hover,
-.item:hover .base {
-    transform: translate(0, 100%);
-}
-
 .hover {
     font-weight: 400;
     position: absolute;
@@ -173,11 +177,6 @@ footer {
     // color: #6993f6;
 }
 
-.item a {
-    width: 100%;
-    height: 100%;
-}
-
 .intro {
     display: flex;
     justify-content: center;
@@ -185,11 +184,10 @@ footer {
     width: 600px;
     height: 50%;
     opacity: 0;
-}
-
-.intro>div {
-    width: 50%;
-    margin: 0 3%;
+    &>div {
+        width: 50%;
+        margin: 0 3%;
+    }
 }
 
 .introRight {
@@ -266,6 +264,11 @@ footer {
     height: 50%;
     background: 1px solid black;
     z-index: 200;
+}
+
+.painting {
+    width: 20%;
+    height: 100%;
 }
 
 // Mobile 

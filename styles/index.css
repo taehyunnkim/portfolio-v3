@@ -124,16 +124,16 @@ footer {
   padding-left: 1.5rem;
 }
 
-.item {
-  list-style: none;
-  margin: 10px;
-  position: relative;
-  overflow: hidden;
-  padding: 0 3px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+.underline {
+  color: gray;
+  font-weight: 200;
+  font-size: 1.3rem;
+  -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.underline:hover {
+  color: black;
 }
 
 .underline:after {
@@ -151,21 +151,36 @@ footer {
   width: 0;
 }
 
-.underline {
-  color: gray;
-  font-weight: 200;
-  font-size: 1.3rem;
-  -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.underline:hover {
-  color: black;
-}
-
 .underline:hover:after {
   width: 100%;
   left: 0;
+}
+
+.item {
+  list-style: none;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  padding: 0 3px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.item:hover .hover {
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+}
+
+.item:hover .base {
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+}
+
+.item > a {
+  width: 100%;
+  height: 100%;
 }
 
 .base {
@@ -183,12 +198,6 @@ footer {
   visibility: hidden;
 }
 
-.item:hover .hover,
-.item:hover .base {
-  -webkit-transform: translate(0, 100%);
-          transform: translate(0, 100%);
-}
-
 .hover {
   font-weight: 400;
   position: absolute;
@@ -197,11 +206,6 @@ footer {
   left: 0;
   -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.item a {
-  width: 100%;
-  height: 100%;
 }
 
 .intro {
@@ -301,6 +305,11 @@ footer {
   height: 50%;
   background: 1px solid black;
   z-index: 200;
+}
+
+.painting {
+  width: 20%;
+  height: 100%;
 }
 
 .mobile {
