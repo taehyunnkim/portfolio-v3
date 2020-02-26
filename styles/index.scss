@@ -256,7 +256,7 @@ footer {
 // 
 // Projects Page
 .projects {
-    opacity: 0.8;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -264,41 +264,78 @@ footer {
     width: 60%;
     height: 35%;
     z-index: 200;
+    &>div {
+        &:hover {
+            opacity: 1 !important;
+        }
+    }
+}
+
+.painting {
+    opacity: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 19%;
+    transition: opacity .5s cubic-bezier(.23, 1, .32, 1);
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
 }
 
 @for $i from 1 through 5 {
     @if $i==1 {
         .painting#{$i} {
-            width: 19%;
             margin-right: 1%;
-            height: 100%;
             background-image: url("/assets/placeholders/" + $i + ".jpg");
-            background-size: cover;
-            border-radius: 3px;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
         }
     }
     @else if $i==5 {
         .painting#{$i} {
-            width: 19%;
             margin-left: 1%;
-            height: 100%;
             background-image: url("/assets/placeholders/" + $i + ".jpg");
-            background-size: cover;
-            border-radius: 3px;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
         }
     }
     @else {
         .painting#{$i} {
-            width: 19%;
             margin: 0% 1%;
-            height: 100%;
             background-image: url("/assets/placeholders/" + $i + ".jpg");
-            background-size: cover;
-            border-radius: 3px;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
         }
+    }
+}
+
+
+/* Basic styling */
+
+svg {
+    width: 100%;
+}
+
+.filled-heading {
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 5em;
+    line-height: 0.9;
+}
+
+
+/* Animate the background shapes */
+
+#background path {
+    animation: pulse 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
+    /* Necessary to keep the SVG objects in place while scaling */
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+}
+
+@keyframes pulse {
+    /* Rotating it along with the scale makes it a little bit more fancy */
+    0%,
+    100% {
+        transform: scale(0) rotate(33deg);
+    }
+    35%,
+    65% {
+        transform: scale(1) rotate(0deg);
     }
 }
 

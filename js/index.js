@@ -35,7 +35,7 @@ const initHome = () => {
     let footer = document.querySelector("footer")
     intro.style.opacity = "1";
 
-    gsap.from(intro, 1, {
+    gsap.from(".intro", 1, {
         opacity: 0,
         y: 50,
         ease: "power4.out"
@@ -69,9 +69,13 @@ function displayProjects() {
 
     overlay[0].addEventListener('transitionend', () => {
         document.body = page;
-        gsap.from(document.querySelector(".projects"), 1, {
-            y: -50,
-            opacity: 0,
+        const projects = document.querySelector(".projects").children;
+        gsap.to(projects, 1.3, {
+            opacity: 0.8,
+            ease: "power4.out"
+        })
+        gsap.from(projects, 1.3, {
+            y: 50,
             ease: "power4.out"
         })
     });
@@ -104,6 +108,26 @@ function displayHome(btn) {
     });
 
 }
+
+function openProject(ele, index) {
+    const projects = Array.from(document.querySelector(".projects").children);
+    const others = projects.filter((project) => {
+        return project != ele;
+    })
+
+
+    ele.style.opacity = "1";
+
+
+
+    const tl = gsap.timeline();
+    tl.to(others, 0.2, {
+        opacity: 0,
+        ease: "power4.out"
+    }).call(() => {});
+}
+
+
 
 // parallax
 function parallaxIt(e, target, movement, screen) {
