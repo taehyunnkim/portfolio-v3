@@ -287,29 +287,78 @@ footer {
 }
 
 .projects {
-  opacity: 0;
+  opacity: 0.8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: 50%;
-  background: 1px solid black;
+  width: 60%;
+  height: 35%;
   z-index: 200;
 }
 
-.painting {
-  width: 20%;
+.painting1 {
+  width: 19%;
+  margin-right: 1%;
   height: 100%;
+  background-image: url("/assets/placeholders/1.jpg");
+  background-size: cover;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+}
+
+.painting2 {
+  width: 19%;
+  margin: 0% 1%;
+  height: 100%;
+  background-image: url("/assets/placeholders/2.jpg");
+  background-size: cover;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+}
+
+.painting3 {
+  width: 19%;
+  margin: 0% 1%;
+  height: 100%;
+  background-image: url("/assets/placeholders/3.jpg");
+  background-size: cover;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+}
+
+.painting4 {
+  width: 19%;
+  margin: 0% 1%;
+  height: 100%;
+  background-image: url("/assets/placeholders/4.jpg");
+  background-size: cover;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+}
+
+.painting5 {
+  width: 19%;
+  margin-left: 1%;
+  height: 100%;
+  background-image: url("/assets/placeholders/5.jpg");
+  background-size: cover;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
 }
 
 .mobile {
