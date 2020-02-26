@@ -56,6 +56,10 @@ footer {
       -ms-flex-align: end;
           align-items: flex-end;
   font-size: 0.3em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .logo {
@@ -233,6 +237,10 @@ footer {
 
 .introLeft {
   height: 85%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .name {

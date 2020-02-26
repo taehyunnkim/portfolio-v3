@@ -51,6 +51,7 @@ footer {
     justify-content: center;
     align-items: flex-end;
     font-size: 0.3em;
+    user-select: none;
 }
 
 .logo {
@@ -203,6 +204,7 @@ footer {
 
 .introLeft {
     height: 85%;
+    user-select: none;
 }
 
 .name {
