@@ -117,7 +117,12 @@ function openProject(ele, index) {
 
 
     ele.style.opacity = "1";
+    ele.style.width = "100%";
+    
 
+    others.map(ele => {
+        ele.style.display = "none";
+    });
 
 
     const tl = gsap.timeline();
